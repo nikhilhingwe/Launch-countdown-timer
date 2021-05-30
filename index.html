@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Launch countdown timer</title>
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+  <link rel="stylesheet" href="/dist/css/main.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <section class="countdown__timer">
+    <div class="container">
+        <h1>We're launching soon</h1>
+         <div class="countdown__grid">
+              <div class="countdown">
+                   <div class="time">
+                        <div class="upper"></div>
+                             <p class="days"></p>
+                        <div class="dipper"></div>
+                   </div>
+                   <h2 class="name">days</h2>
+              </div>
+
+              <div class="countdown">
+                  <div class="time">
+                      <div class="upper"></div>
+                           <p class="hours"></p>
+                      <div class="dipper"></div>
+                  </div>
+                  <h2 class="name">hours</h2>
+              </div>
+
+              <div class="countdown">
+                   <div class="time">
+                         <div class="upper"></div>
+                              <p class="minutes"></p>
+                         <div class="dipper"></div>
+                   </div>
+                   <h2 class="name">minutes</h2>
+              </div>
+              <div class="countdown">
+                    <div class="time">
+                          <div class="upper"></div>
+                               <p class="seconds"></p>
+                          <div class="dipper"></div>
+                    </div>
+                    <h2 class="name">seconds</h2>
+              </div>
+              <audio autoplay src="./audio/gameCountdown.wav" id="sec"></audio>
+              <audio src="./audio/DoorbellSound.wav" id="min"></audio>
+         </div>
+         <div class="social-media">
+                  <i class="fab fa-facebook-square"></i>  
+                  <i class="fab fa-pinterest"></i>   
+                  <i class="fab fa-instagram"></i>
+         </div>
+    </div>
+    <div class="naming"></div>
+  <audio id="naming-audIn" src="./audio/Abductionswish.mp3"></audio>
+  <audio id="naming-audOut" src="./audio/Evilswish.mp3"></audio>
+ <!-- ***********desktop********** -->
+  <div class="attribution">
+       <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+           Coded by <a href="https://github.com/Nik-web12/Blogr-landing-page">Nikhil Hingwe</a>.</p>
+  </div>
+  </section>
+
+
+<!-- 
+  We're launching soon
+
+  Days
+  Hours
+  Minutes
+  Seconds
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <script src="./Js/timer.js"></script>
+</body>
+</html>

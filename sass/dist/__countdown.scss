@@ -1,0 +1,348 @@
+@import "./_mixins";
+
+.countdown__timer{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(180deg, #191A24 17%, #1e1f29 51%, #2b212d 83%);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    &::before{
+        content: "";
+        display: block;
+        background-image: url(/images/bg-stars.svg);
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+    }
+    &::after{
+        content: "";
+        display: block;
+        background-image: url(/images/pattern-hills.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        background-position: bottom;
+        @include max(900px){
+            background-size: 130%;
+        }
+        @include max(600px){
+            background-size: 100%;
+        }
+    }
+
+    h1{
+        z-index: 100;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.35rem;
+        letter-spacing: 8px;
+        word-spacing: -2px;
+        color: $White;
+        margin-left: -15px;
+        margin-top: 135px;
+        margin-bottom: 105px;
+        @include max(750px){
+            margin-bottom: 80px;
+        }
+        @include max(600px){
+            max-width: 21rem;
+            margin: 0px auto;
+            padding-top: 100px;
+            padding-bottom: 50px;
+            line-height: 1.5;
+        }
+        @include max(500px){
+            padding-bottom: 40px;
+            font-size: 1.1rem;
+        }
+    }
+    .countdown__grid{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-column-gap: 22px;
+        margin-left: -5px;
+        @include max(750px){
+            margin-left: 0px;
+            grid-gap: 20px;
+        }
+        @include max(500px){
+            grid-gap: 10px;
+        }
+    }
+
+    .time{
+        position: relative;
+        margin-right: 10px;
+        height: 140px;
+        width: 148px;
+        background: transparent;
+        @include max(750px){
+            margin-right: 0px;
+            height: 100px;
+            width: 100px;
+        }
+        @include max(500px){
+            margin-right: 0px;
+            height: 40px;
+            width: 70px;
+        }
+        @include max(335px){
+            margin-right: 0px;
+            height: 40px;
+            width: 60px;
+        }
+        &::before{
+            z-index: 100;
+            content: "";
+            display: block;
+            height: 12px;
+            width: 6px;
+            background: $Verydark;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 0 50px 50px 0;
+            @include max(750px){
+                top: 70%;
+            }
+            @include max(600px){
+                top: 55%;
+            }
+            @include max(500px){
+                top: 96%;
+            }
+        }
+
+        &::after{
+            content: "";
+            display: block;
+            height: 12px;
+            width: 6px;
+            background: $Verydark;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            border-radius: 50px 0 0 50px;
+            @include max(750px){
+                top: 70%;
+            }
+            @include max(600px){
+                top: 55%;
+            }
+            @include max(500px){
+                top: 96%;
+                right: -1px;
+            }
+        }
+
+
+        .upper{
+            border-radius: 7px 7px 0 0 ;
+            height: 70px;
+            width: 100%;
+            background: #2C2C44;
+            border-bottom: 1px solid rgba(26, 26, 26, 0.192);
+            transform: rotateX(10deg) ;
+            @include max(600px){
+                height: 55px;
+            }
+            @include max(500px){
+                height: 40px;
+            }
+        }
+        p{
+            opacity: 0.9;
+            z-index: 100;
+            color: $Softred;
+            font-size: 4.9rem;
+            position: absolute;
+            top: 13%;
+            left: 50%;
+            transform: translate(-50%);
+            @include max(750px){
+                top: 26%;
+                font-size: 4rem;
+            }
+            @include max(600px){
+                font-size: 2.8rem;
+            }
+            @include max(500px){
+                top: 50%;
+                font-size: 2rem;
+            }
+        }
+        .dipper{
+            border-radius:  0 0 7px 7px;
+            height: 70px;
+            width: 100%;
+            background: $Darkdesaturatedblue;
+            transform: rotateX(-10deg) rotateY(-0.5px);
+            box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.192);
+            @include max(600px){
+                height: 55px;
+            }
+            @include max(500px){
+                height: 40px;
+            }
+        }
+
+    }
+    .name{
+        color: $Grayishblue;
+        font-size: 0.9rem;
+        text-align: center;
+        letter-spacing: 5.5px;
+        text-transform: uppercase;
+        padding-top: 26px;
+        padding-right: 10px;
+        @include max(750px){
+            font-size: 0.6rem;
+            padding-top: 60px;
+            letter-spacing: 4px;
+        }
+        @include max(600px){
+            font-size: 0.65rem;
+            padding-top: 30px;
+            letter-spacing: 3px;
+        }
+        @include max(500px){
+            font-size: 0.5rem;
+            padding-top: 55px;
+            letter-spacing: 3px;
+        }
+    }
+
+    .social-media{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        bottom: 23px;
+        z-index: 100;
+        margin-left: -8px;
+         i{
+            margin: 0px 14.3px;
+            color: $Grayishblue;
+            font-size: 1.65rem;
+            transition: 0.2s ease-in;
+            &:hover{
+                color: $Softred;
+                opacity: 0.9;  
+                cursor: pointer;
+            }
+        }
+        &:focus{
+            outline: 2px dotted $Softred;
+            outline-offset: 0.25rem;
+        }
+    }
+}
+
+.container{
+    padding: 0px 10px;
+}
+
+
+
+// ======================================== \\
+
+.naming{
+    height: 69px;
+    width: 68px;
+    background: url(/images/nik-web12.jpg);
+    background-size: cover;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    border-radius: 50px;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+    z-index: 250;
+    @include max(768px){
+        bottom: 50px;
+        right: 30px;
+        height: 48px;
+        width: 48px;
+    }
+}
+
+.clickIn{
+    opacity: 1;
+    transform: scale(0.97);
+}
+
+// ******************************* Attribution*************************************** \\
+.attribution{
+    visibility: hidden;
+    font-family: 'Red Hat Text', sans-serif;
+    position: fixed;
+    bottom: 110px;
+    right: 120px;
+    padding: 20px 20px;
+    background: $Darkdesaturatedblue;
+    border-radius: 50px 50px 0 50px;
+    z-index: 1000;
+    @include max(768px){
+        padding: 25px 10px;
+        bottom: 80px;
+        right: 80px;
+        margin: 0px 20px;
+    }
+    p{
+        color: $Softred;
+        font-size: 0.9rem;
+        max-width: 15rem;
+        line-height: 1.6;
+        @include max(768px){
+            font-size: 0.8;
+            max-width: 15rem;
+        }
+        a{
+            text-decoration: double;
+            color: $Softred;
+        }
+    }
+}
+
+
+// ====================
+
+
+.in{
+    animation: slideIn 0.3s ease-in both;
+    animation-iteration-count: 1;
+}
+
+@keyframes slideIn {
+    from{
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.out{
+    animation: slideOut 0.3s ease-in forwards;
+}
+
+@keyframes slideOut {
+    from{
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    to{
+        visibility: hidden;
+        opacity: 0;
+        transform: translate(40px);
+    }   
+}
