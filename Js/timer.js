@@ -7,7 +7,7 @@ let secondSound = document.querySelector('#sec');
 let minuteSound = document.querySelector('#min')
 
 let time = setInterval(()=>{
-    let destination = new Date("Tue June 8 2021").getTime();  // Destination date
+    let destination = new Date("Tue June 15 2021").getTime();  // Destination date
     let now = new Date().getTime(); // Current Date and time
     
     let ms = 1000;  // milliseconds
